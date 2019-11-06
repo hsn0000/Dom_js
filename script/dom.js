@@ -73,5 +73,10 @@
 
 // (7)
 
-const p2 = document.querySelector('.p2');
-p2.setAttribute('class','label');
+// const p2 = document.querySelector('.p2');
+// p2.setAttribute('class','label');
+
+
+
+
+
