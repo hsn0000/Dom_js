@@ -8,6 +8,12 @@
 
     <link rel="stylesheet" type="text/css" href="css/traversal.css">
 
+    <style>
+     .card a {
+       text-decoration: none;
+     }
+    </style>
+
 </head>
 <body>
     
@@ -17,7 +23,7 @@
           <img src="img/profile.jpg" width="96" height="96">
           <span class="nama">Husin</span>
           <span class="telp">08123456789</span>
-          <span class="close">×</span>
+          <a href="" class="close">×</a>
         </div> 
     
     </div>
@@ -28,7 +34,7 @@
           <img src="img/gajah.png" width="96" height="96">
           <span class="nama">Farid</span>
           <span class="telp">08123456789</span>
-          <span class="close">×</span>
+          <a href="" class="close">×</a>
         </div> 
     
     </div>
@@ -39,7 +45,7 @@
           <img src="img/orang.png" width="96" height="96">
           <span class="nama">Erick</span>
           <span class="telp">08123456789</span>
-          <span class="close">×</span>
+          <a href="" class="close">×</a>
         </div> 
     
     </div>
@@ -50,12 +56,42 @@
           <img src="img/semut.png" width="96" height="96">
           <span class="nama">Herman</span>
           <span class="telp">08123456789</span>
-          <span class="close">×</span>
+          <a href="" class="close">×</a>
         </div> 
     
     </div>
 
-    <script src="script/traversal.js"></script>
+    <!-- <script src="script/traversal.js"></script> -->
+
+   <script>
+    
+      const close = document.querySelectorAll('.close');
+  // const card = document.querySelectorAll('.card');
+
+  // for( let i = 0; i < close.length; i++ ) {
+  //    close[i].addEventListener('click', function(e) {
+  //     //   card[i].parentElement.style.display = 'none';
+  //      e.target.parentElement.style.display = 'none';
+
+  //    });
+  // }
+
+      close.forEach(function(el) {
+          el.addEventListener('click', function(e) {
+              e.target.parentElement.style.display = 'none';
+              e.preventDefault();
+              e.stopPropagation();
+          });
+      });   
+
+      const card = document.querySelectorAll('.card');
+      card.forEach(function(card) {
+          card.addEventListener('click', function(e) {
+            alert('ok');
+         });
+    });
+
+   </script>
 
 </body>
 </html>
